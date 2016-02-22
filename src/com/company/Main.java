@@ -119,10 +119,10 @@ public class Main {
 
         Bag unassigned = getUnassignedVariable();
         for(Bag bag: orderDomainValues(unassigned, items)){
-            if(satifysConstraints(bag, items)){
+            if(satifiesConstraints(bag, items)){
                 //Add item to assignment
                 //inferences ←INFERENCE(csp,var,value)
-                if(satifysConstraints(inference, items){
+                if(satifiesConstraints(inference, items){
                     //add inference to assignment
                     ArrayList<BagItem> result = backTrack(items);
                     if(result.size() != 0){
@@ -140,8 +140,8 @@ public class Main {
         //Implement heuristic here.
     }
 
-    boolean satifysConstraints(Bag bag, ArrayList<BagItem> items) {
-        //Is it possible to add item to bags without violating any constraints?
+    boolean satifiesConstraints(Bag bag, ArrayList<BagItem> items) {
+        //Is it possible to add bag value to items without violating any constraints?
     }
 
     boolean complete(ArrayList<BagItem> items){
