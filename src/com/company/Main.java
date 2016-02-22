@@ -14,15 +14,10 @@ public class Main {
             System.exit(-1);
         }
 
-        ArrayList<String> variables = new ArrayList<String>();
-        ArrayList<String> values = new ArrayList<String>();
-        ArrayList<String> fittingLimits = new ArrayList<String>();
-        ArrayList<String> unaryInclusive = new ArrayList<String>();
-        ArrayList<String> unaryExclusive = new ArrayList<String>();
-        ArrayList<String> binaryEquals = new ArrayList<String>();
-        ArrayList<String> binaryNotEquals = new ArrayList<String>();
-        ArrayList<String> mutualInclusive = new ArrayList<String>();
+        ArrayList<BinaryConstraint> constraints = new ArrayList<BinaryConstraint>();
 
+        ArrayList<BagItem> variables = new ArrayList<BagItem>();
+        ArrayList<Bag> bags = new ArrayList<Bag>();
         try {
             FileReader fileReader = new FileReader(args[0]);
 
@@ -39,28 +34,62 @@ public class Main {
                 }else{
                     switch (inputCount){
                         case 1:
-                            variables.add(line);
+                            String[] vars = line.split(" ");
+                            BagItem item = new BagItem();
+                            item.letter = vars[0].charAt(0);
+                            item.weight = Integer.parseInt(vars[1]);
+
+                            variables.add(item);
                             break;
                         case 2:
-                            values.add(line);
+                            String[] x = line.split(" ");
+                            Bag bag = new Bag();
+                            bag.letter = x[0].charAt(0);
+                            bag.capacity = Integer.parseInt(x[1]);
+
+                            bags.add(bag);
                             break;
                         case 3:
-                            fittingLimits.add(line);
+                            String[] limits = line.split(" ");
+
+                            for(Bag y: bags){
+                                y.lowerLimit = Integer.parseInt(limits[0]);
+                                y.upperLimit = Integer.parseInt(limits[1]);
+                            }
                             break;
                         case 4:
-                            unaryInclusive.add(line);
+                            String[] unIn = line.split(" ");
+
+                            for(BagItem var: variables){
+                                if(var.letter == unIn[0].charAt(0)){
+                                    for(int i = 1; i < unIn.length; i++){
+                                        var.allowedBags.add(unIn[i].charAt(0));
+                                    }
+                                }
+                            }
                             break;
                         case 5:
-                            unaryExclusive.add(line);
+                            String[] unEx = line.split(" ");
+
+                            for(BagItem var: variables){
+                                if(var.letter == unEx[0].charAt(0)){
+                                    for(int i = 1; i < unEx.length; i++){
+                                        var.disallowedBags.add(unEx[i].charAt(0));
+                                    }
+                                }
+                            }
                             break;
                         case 6:
-                            binaryEquals.add(line);
+                            String[] eq = line.split(" ");
+                            constraints.add(new BinaryConstraint(eq[0].charAt(0), eq[1].charAt(0), BinaryConstraint.TypeOfBinaryConstraint.EQUAL));
                             break;
                         case 7:
-                            binaryNotEquals.add(line);
+                            String[] notEQ = line.split(" ");
+                            constraints.add(new BinaryConstraint(notEQ[0].charAt(0), notEQ[1].charAt(0), BinaryConstraint.TypeOfBinaryConstraint.NOTEQUAL));
                             break;
                         case 8:
-                            mutualInclusive.add(line);
+                            String[] mutIn = line.split(" ");
+                            constraints.add(new BinaryConstraint(mutIn[0].charAt(0), mutIn[1].charAt(0),mutIn[2].charAt(0), mutIn[3].charAt(0)));
                             break;
                     }
                 }

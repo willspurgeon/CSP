@@ -2,11 +2,11 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="5e295c57-889c-458e-abfe-3f20c10f45cb" name="Default" comment="">
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/com/company/BinaryConstraint.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/CSP/com/company/Main.class" afterPath="$PROJECT_DIR$/out/production/CSP/com/company/Main.class" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/uiDesigner.xml" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/src/com/company/BagItems.java" afterPath="$PROJECT_DIR$/src/com/company/BagItem.java" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/com/company/Bag.java" afterPath="$PROJECT_DIR$/src/com/company/Bag.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/com/company/BagItems.java" afterPath="$PROJECT_DIR$/src/com/company/BagItems.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/com/company/BinaryConstraint.java" afterPath="$PROJECT_DIR$/src/com/company/BinaryConstraint.java" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/com/company/Main.java" afterPath="$PROJECT_DIR$/src/com/company/Main.java" />
     </list>
     <ignored path="CSP.iws" />
@@ -32,18 +32,12 @@
       <file leaf-file-name="Main.java" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/com/company/Main.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.632732">
-              <caret line="65" column="17" selection-start-line="65" selection-start-column="17" selection-end-line="65" selection-end-column="17" />
+            <state vertical-scroll-proportion="0.52583027">
+              <caret line="19" column="51" selection-start-line="19" selection-start-column="51" selection-end-line="19" selection-end-column="51" />
               <folding>
                 <element signature="imports" expanded="true" />
-                <element signature="e#437#445#0" expanded="true" />
-                <element signature="e#497#505#0" expanded="true" />
-                <element signature="e#564#572#0" expanded="true" />
-                <element signature="e#632#640#0" expanded="true" />
-                <element signature="e#700#708#0" expanded="true" />
-                <element signature="e#766#774#0" expanded="true" />
-                <element signature="e#835#843#0" expanded="true" />
-                <element signature="e#904#912#0" expanded="true" />
+                <element signature="e#449#467#0" expanded="true" />
+                <element signature="e#524#533#0" expanded="true" />
               </folding>
             </state>
           </provider>
@@ -59,11 +53,11 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="BagItems.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/com/company/BagItems.java">
+      <file leaf-file-name="BagItem.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/com/company/BagItem.java">
           <provider selected="true" editor-type-id="text-editor">
             <state vertical-scroll-proportion="0.0">
-              <caret line="12" column="40" selection-start-line="12" selection-start-column="40" selection-end-line="12" selection-end-column="40" />
+              <caret line="7" column="20" selection-start-line="7" selection-start-column="20" selection-end-line="7" selection-end-column="20" />
               <folding />
             </state>
           </provider>
@@ -73,7 +67,7 @@
         <entry file="file://$PROJECT_DIR$/src/com/company/BinaryConstraint.java">
           <provider selected="true" editor-type-id="text-editor">
             <state vertical-scroll-proportion="0.0">
-              <caret line="8" column="0" selection-start-line="8" selection-start-column="0" selection-end-line="8" selection-end-column="0" />
+              <caret line="17" column="25" selection-start-line="17" selection-start-column="25" selection-end-line="17" selection-end-column="25" />
               <folding />
             </state>
           </provider>
@@ -100,8 +94,9 @@
     <option name="CHANGED_PATHS">
       <list>
         <option value="$PROJECT_DIR$/src/com/company/Bag.java" />
-        <option value="$PROJECT_DIR$/src/com/company/BagItems.java" />
         <option value="$PROJECT_DIR$/src/com/company/BinaryConstraint.java" />
+        <option value="$PROJECT_DIR$/src/com/company/BagItems.java" />
+        <option value="$PROJECT_DIR$/src/com/company/BagItem.java" />
         <option value="$PROJECT_DIR$/src/com/company/Main.java" />
       </list>
     </option>
@@ -478,10 +473,12 @@
     <layout>
       <window_info id="Palette" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
+      <window_info id="Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.329602" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Palette&#9;" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="true" content_ui="tabs" />
       <window_info id="Maven Projects" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
+      <window_info id="Run" active="true" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.29104477" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Designer" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
@@ -489,15 +486,13 @@
       <window_info id="Ant Build" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="UI Designer" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="true" content_ui="tabs" />
+      <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Cvs" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
-      <window_info id="Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.329602" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Message" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Commander" active="false" anchor="right" auto_hide="false" internal_type="SLIDING" type="SLIDING" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Inspection" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
-      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.29104477" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Hierarchy" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="2" side_tool="false" content_ui="combo" />
       <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
-      <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
     </layout>
   </component>
   <component name="Vcs.Log.UiProperties">
@@ -526,14 +521,8 @@
           <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
           <folding>
             <element signature="imports" expanded="true" />
-            <element signature="e#437#445#0" expanded="true" />
-            <element signature="e#497#505#0" expanded="true" />
-            <element signature="e#564#572#0" expanded="true" />
-            <element signature="e#632#640#0" expanded="true" />
-            <element signature="e#700#708#0" expanded="true" />
-            <element signature="e#766#774#0" expanded="true" />
-            <element signature="e#835#843#0" expanded="true" />
-            <element signature="e#904#912#0" expanded="true" />
+            <element signature="e#449#467#0" expanded="true" />
+            <element signature="e#524#533#0" expanded="true" />
           </folding>
         </state>
       </provider>
@@ -544,14 +533,8 @@
           <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
           <folding>
             <element signature="imports" expanded="true" />
-            <element signature="e#437#445#0" expanded="true" />
-            <element signature="e#497#505#0" expanded="true" />
-            <element signature="e#564#572#0" expanded="true" />
-            <element signature="e#632#640#0" expanded="true" />
-            <element signature="e#700#708#0" expanded="true" />
-            <element signature="e#766#774#0" expanded="true" />
-            <element signature="e#835#843#0" expanded="true" />
-            <element signature="e#904#912#0" expanded="true" />
+            <element signature="e#449#467#0" expanded="true" />
+            <element signature="e#524#533#0" expanded="true" />
           </folding>
         </state>
       </provider>
@@ -562,14 +545,8 @@
           <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
           <folding>
             <element signature="imports" expanded="true" />
-            <element signature="e#437#445#0" expanded="true" />
-            <element signature="e#497#505#0" expanded="true" />
-            <element signature="e#564#572#0" expanded="true" />
-            <element signature="e#632#640#0" expanded="true" />
-            <element signature="e#700#708#0" expanded="true" />
-            <element signature="e#766#774#0" expanded="true" />
-            <element signature="e#835#843#0" expanded="true" />
-            <element signature="e#904#912#0" expanded="true" />
+            <element signature="e#449#467#0" expanded="true" />
+            <element signature="e#524#533#0" expanded="true" />
           </folding>
         </state>
       </provider>
@@ -589,10 +566,10 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/com/company/BagItems.java">
+    <entry file="file://$PROJECT_DIR$/src/com/company/BagItem.java">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0">
-          <caret line="12" column="40" selection-start-line="12" selection-start-column="40" selection-end-line="12" selection-end-column="40" />
+          <caret line="7" column="20" selection-start-line="7" selection-start-column="20" selection-end-line="7" selection-end-column="20" />
           <folding />
         </state>
       </provider>
@@ -600,25 +577,19 @@
     <entry file="file://$PROJECT_DIR$/src/com/company/BinaryConstraint.java">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0">
-          <caret line="8" column="0" selection-start-line="8" selection-start-column="0" selection-end-line="8" selection-end-column="0" />
+          <caret line="17" column="25" selection-start-line="17" selection-start-column="25" selection-end-line="17" selection-end-column="25" />
           <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/com/company/Main.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.632732">
-          <caret line="65" column="17" selection-start-line="65" selection-start-column="17" selection-end-line="65" selection-end-column="17" />
+        <state vertical-scroll-proportion="0.52583027">
+          <caret line="19" column="51" selection-start-line="19" selection-start-column="51" selection-end-line="19" selection-end-column="51" />
           <folding>
             <element signature="imports" expanded="true" />
-            <element signature="e#437#445#0" expanded="true" />
-            <element signature="e#497#505#0" expanded="true" />
-            <element signature="e#564#572#0" expanded="true" />
-            <element signature="e#632#640#0" expanded="true" />
-            <element signature="e#700#708#0" expanded="true" />
-            <element signature="e#766#774#0" expanded="true" />
-            <element signature="e#835#843#0" expanded="true" />
-            <element signature="e#904#912#0" expanded="true" />
+            <element signature="e#449#467#0" expanded="true" />
+            <element signature="e#524#533#0" expanded="true" />
           </folding>
         </state>
       </provider>

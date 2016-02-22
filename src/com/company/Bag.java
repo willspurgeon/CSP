@@ -12,5 +12,5 @@ public class Bag {
     int upperLimit = Integer.MAX_VALUE;
     int lowerLimit = Integer.MAX_VALUE;
 
-    ArrayList<BagItems> items;
+    ArrayList<BagItem> items;
 }

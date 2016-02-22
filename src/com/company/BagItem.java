@@ -5,7 +5,7 @@ import java.util.ArrayList;
 /**
  * Created by Will on 2/22/16.
  */
-public class BagItems {
+public class BagItem {
     char letter;
     int weight;
 
