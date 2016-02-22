@@ -8,6 +8,8 @@ import java.util.ArrayList;
 
 public class Main {
 
+    static ArrayList<Bag> bags = new ArrayList<Bag>();
+
     public static void main(String[] args) {
         if (args.length != 1) {
             System.out.print("Wrong number of command line arguments!");
@@ -17,7 +19,7 @@ public class Main {
         ArrayList<BinaryConstraint> constraints = new ArrayList<BinaryConstraint>();
 
         ArrayList<BagItem> variables = new ArrayList<BagItem>();
-        ArrayList<Bag> bags = new ArrayList<Bag>();
+
         try {
             FileReader fileReader = new FileReader(args[0]);
 
@@ -104,4 +106,49 @@ public class Main {
         }
 
     }
+
+    void backTrackingSearch(){
+        backTrack(bags);
+    }
+
+    ArrayList<Bag> backTrack(ArrayList<Bag> bags){
+        if(complete(bags)){
+            return bags;
+        }
+
+        BagItem unassigned = getUnassignedVariable();
+        for(BagItem item: orderDomainValues(unassigned, bags)){
+            if(satifysConstraints(item, bags)){
+                //Add item to assignment
+                //inferences ←INFERENCE(csp,var,value)
+                if(satifysConstraints(inference, bags){
+                    //add inference to assignment
+                    ArrayList<Bag> result = backTrack(bags);
+                    if(result.size() != 0){
+                        //Not a failure
+                        return result;
+                    }
+                }
+            }
+            //Remove item and inference from assignment
+        }
+        return new ArrayList<Bag>();
+    }
+
+    BagItem[] orderDomainValues(BagItem unassigned, ArrayList<Bag> bags) {
+        //
+    }
+
+    boolean satifysConstraints(BagItem item, ArrayList<Bag> bags) {
+        //Is it possible to add item to bags without violating any constraints?
+    }
+
+    boolean complete(ArrayList<Bag> bags){
+
+    }
+
+    BagItem getUnassignedVariable(){
+
+    }
+
 }
