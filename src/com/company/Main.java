@@ -9,6 +9,7 @@ import java.util.ArrayList;
 public class Main {
 
     static ArrayList<Bag> bags = new ArrayList<Bag>();
+    ArrayList<BagItem> items;
 
     public static void main(String[] args) {
         if (args.length != 1) {
@@ -111,19 +112,19 @@ public class Main {
         backTrack(bags);
     }
 
-    ArrayList<Bag> backTrack(ArrayList<Bag> bags){
-        if(complete(bags)){
-            return bags;
+    ArrayList<BagItem> backTrack(ArrayList<BagItem> items){
+        if(complete(items)){
+            return items;
         }
 
-        BagItem unassigned = getUnassignedVariable();
-        for(BagItem item: orderDomainValues(unassigned, bags)){
-            if(satifysConstraints(item, bags)){
+        Bag unassigned = getUnassignedVariable();
+        for(Bag bag: orderDomainValues(unassigned, items)){
+            if(satifysConstraints(bag, items)){
                 //Add item to assignment
                 //inferences ←INFERENCE(csp,var,value)
-                if(satifysConstraints(inference, bags){
+                if(satifysConstraints(inference, items){
                     //add inference to assignment
-                    ArrayList<Bag> result = backTrack(bags);
+                    ArrayList<BagItem> result = backTrack(items);
                     if(result.size() != 0){
                         //Not a failure
                         return result;
@@ -132,23 +133,28 @@ public class Main {
             }
             //Remove item and inference from assignment
         }
-        return new ArrayList<Bag>();
+        return new ArrayList<BagItem>();
     }
 
-    BagItem[] orderDomainValues(BagItem unassigned, ArrayList<Bag> bags) {
-        //
+    Bag[] orderDomainValues(Bag unassigned, ArrayList<BagItem> items) {
+        //Implement heuristic here.
     }
 
-    boolean satifysConstraints(BagItem item, ArrayList<Bag> bags) {
+    boolean satifysConstraints(Bag bag, ArrayList<BagItem> items) {
         //Is it possible to add item to bags without violating any constraints?
     }
 
-    boolean complete(ArrayList<Bag> bags){
-
+    boolean complete(ArrayList<BagItem> items){
+        for(BagItem item: items){
+            if(item.bagValue == ' '){
+                return false;
+            }
+        }
+        return true;
     }
 
-    BagItem getUnassignedVariable(){
-
+    Bag getUnassignedVariable(){
+        //Implement heuristic here.
     }
 
 }
