@@ -128,9 +128,9 @@ public class Main {
             return items;
         }
 
-        Bag unassigned = getUnassignedVariable();
+        BagItem unassigned = getUnassignedVariable();
         for(Bag bag: orderDomainValues(unassigned, items)){
-            if(satifiesConstraints(bag, items)){
+            if(satifiesConstraints(bag, unassigned, items)){
                 //Add item to assignment
                 //inferences ←INFERENCE(csp,var,value)
                 if(satifiesConstraints(inference, items){
@@ -147,13 +147,15 @@ public class Main {
         return new ArrayList<BagItem>();
     }
 
-    static Bag[] orderDomainValues(Bag unassigned, ArrayList<BagItem> items) {
+    static Bag[] orderDomainValues(BagItem unassigned, ArrayList<BagItem> items) {
         //Implement heuristic here.
+        return (Bag[]) bags.toArray();
     }
 
-    static boolean satifiesConstraints(Bag bag, ArrayList<BagItem> items) {
+    static boolean satifiesConstraints(Bag bag, BagItem singleItem, ArrayList<BagItem> items) {
         //Is it possible to add bag value to items without violating any constraints?
         //Do we need to include a binary constraints classifier to the intances?
+
         if (bag.lowerLimit < bag.capacity && bag.capacity < bag.upperLimit) {
 
             for (int i = 0; i < BagItem.getallowedbags().size(); i++) {
@@ -187,7 +189,7 @@ public class Main {
         return true;
     }
 
-    static Bag getUnassignedVariable(){
+    static BagItem getUnassignedVariable(){
         //Implement heuristic here.
         Bag result = new Bag();
         for(Bag bag: bags){
