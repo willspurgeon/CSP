@@ -180,6 +180,17 @@ public class Main {
             return false;
     }
 
+    static int min(Integer[] input){
+        int result = Integer.MAX_VALUE;
+
+        for(Integer num: input){
+            if(num < result){
+                result = num;
+            }
+        }
+        return result;
+    }
+
     static boolean complete(ArrayList<BagItem> items){
         for(BagItem item: items){
             if(item.bagValue == ' '){
@@ -191,16 +202,19 @@ public class Main {
 
     static BagItem getUnassignedVariable(){
         //Implement heuristic here.
-        Bag result = new Bag();
-        for(Bag bag: bags){
-            for(BagItem item: items){
-                if(item.bagValue == bag.letter){
-                    break;
+        //Min-remaining values.
+        Integer[] resultArray = new Integer[items.size()];
+        int i = 0;
+        for(BagItem item: items){
+            for(Bag bag: bags){
+                if(satifiesConstraints(bag, item, items)){
+                    resultArray[i]++;
                 }
             }
-            return bag;
+            i++;
         }
-        return result;
+
+        return items.get(min(resultArray));
     }
 
 }
