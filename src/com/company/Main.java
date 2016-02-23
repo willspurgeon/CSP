@@ -142,20 +142,29 @@ public class Main {
 
     boolean satifiesConstraints(Bag bag, ArrayList<BagItem> items) {
         //Is it possible to add bag value to items without violating any constraints?
-        if(x<Bag&&Bag<y)
-            return true;
-        for(int i=0; i< Bagitem.getallowedbags().size(),i++)
-        {
-            if(Bagitem.getallowedbags(i).equals(Bag))
-                return true;
-        }
+        //Do we need to include a binary constraints classifier to the intances?
+        if (bag.lowerLimit < bag.capacity && bag.capacity < bag.upperLimit) {
 
-        for(int i=0; i< Bagitem.getdisallowedbags().size(),i++)
-        {
-            if(Bagitem.getdisallowedbags(i).equals(Bag))
-                return true;
-        }
+            for (int i = 0; i < Bagitem.getallowedbags().size(); i++) {
+                if (Bagitem.getallowedbags(i).equals(bag)) {
+                    for (int j = 0; j < Bagitem.getdisallowedbags().size(); j++) {
+                        if (Bagitem.getdisallowedbags(j).equals(bag))
+                            if (binaryconstraintfunction) {
+                                if (binaryconstraintfunction2) {
+                                    if (binaryconstraintfunction3) {
+                                        return true;
+                                    }
 
+                                }
+                            }
+                    }
+                }
+            }
+
+
+        }
+        else
+            return false;
     }
 
     boolean complete(ArrayList<BagItem> items){
