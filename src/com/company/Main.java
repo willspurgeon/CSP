@@ -9,7 +9,7 @@ import java.util.ArrayList;
 public class Main {
 
     static ArrayList<Bag> bags = new ArrayList<Bag>();
-    ArrayList<BagItem> items;
+    static ArrayList<BagItem> items;
 
     public static void main(String[] args) {
         if (args.length != 1) {
@@ -106,13 +106,24 @@ public class Main {
             e.printStackTrace();
         }
 
+        backTrackingSearch();
+
     }
 
-    void backTrackingSearch(){
-        backTrack(items);
+    static void backTrackingSearch(){
+        ArrayList<BagItem> result = backTrack(items);
+
+        if(result.size() == 0){
+            System.out.println("There is no solution.");
+        }else{
+            for(BagItem item: result){
+                System.out.println("Item " + item.letter + " is in bag " + item.bagValue);
+            }
+        }
+
     }
 
-    ArrayList<BagItem> backTrack(ArrayList<BagItem> items){
+    static ArrayList<BagItem> backTrack(ArrayList<BagItem> items){
         if(complete(items)){
             return items;
         }
@@ -136,11 +147,11 @@ public class Main {
         return new ArrayList<BagItem>();
     }
 
-    Bag[] orderDomainValues(Bag unassigned, ArrayList<BagItem> items) {
+    static Bag[] orderDomainValues(Bag unassigned, ArrayList<BagItem> items) {
         //Implement heuristic here.
     }
 
-    boolean satifiesConstraints(Bag bag, ArrayList<BagItem> items) {
+    static boolean satifiesConstraints(Bag bag, ArrayList<BagItem> items) {
         //Is it possible to add bag value to items without violating any constraints?
         //Do we need to include a binary constraints classifier to the intances?
         if (bag.lowerLimit < bag.capacity && bag.capacity < bag.upperLimit) {
@@ -167,7 +178,7 @@ public class Main {
             return false;
     }
 
-    boolean complete(ArrayList<BagItem> items){
+    static boolean complete(ArrayList<BagItem> items){
         for(BagItem item: items){
             if(item.bagValue == ' '){
                 return false;
@@ -176,7 +187,7 @@ public class Main {
         return true;
     }
 
-    Bag getUnassignedVariable(){
+    static Bag getUnassignedVariable(){
         //Implement heuristic here.
         Bag result = new Bag();
         for(Bag bag: bags){
