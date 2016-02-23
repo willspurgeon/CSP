@@ -181,6 +181,7 @@ public class Main {
     }
 
     static int min(Integer[] input){
+        //Returns the smallest integer.
         int result = Integer.MAX_VALUE;
 
         for(Integer num: input){
@@ -192,6 +193,7 @@ public class Main {
     }
 
     static boolean complete(ArrayList<BagItem> items){
+        //Check to see if all items have been assigned to bags.
         for(BagItem item: items){
             if(item.bagValue == ' '){
                 return false;
