@@ -178,6 +178,16 @@ public class Main {
 
     Bag getUnassignedVariable(){
         //Implement heuristic here.
+        Bag result = new Bag();
+        for(Bag bag: bags){
+            for(BagItem item: items){
+                if(item.bagValue == bag.letter){
+                    break;
+                }
+            }
+            return bag;
+        }
+        return result;
     }
 
 }
