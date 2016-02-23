@@ -7,7 +7,7 @@ import java.util.ArrayList;
  */
 public class Bag {
     char letter;
-    int capacity;
+    int capacity; //Weight
 
     int upperLimit = Integer.MAX_VALUE;
     int lowerLimit = Integer.MAX_VALUE;

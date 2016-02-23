@@ -109,7 +109,7 @@ public class Main {
     }
 
     void backTrackingSearch(){
-        backTrack(bags);
+        backTrack(items);
     }
 
     ArrayList<BagItem> backTrack(ArrayList<BagItem> items){
@@ -145,7 +145,7 @@ public class Main {
         //Do we need to include a binary constraints classifier to the intances?
         if (bag.lowerLimit < bag.capacity && bag.capacity < bag.upperLimit) {
 
-            for (int i = 0; i < Bagitem.getallowedbags().size(); i++) {
+            for (int i = 0; i < BagItem.getallowedbags().size(); i++) {
                 if (Bagitem.getallowedbags(i).equals(bag)) {
                     for (int j = 0; j < Bagitem.getdisallowedbags().size(); j++) {
                         if (Bagitem.getdisallowedbags(j).equals(bag))
