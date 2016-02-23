@@ -142,6 +142,20 @@ public class Main {
 
     boolean satifiesConstraints(Bag bag, ArrayList<BagItem> items) {
         //Is it possible to add bag value to items without violating any constraints?
+        if(x<Bag&&Bag<y)
+            return true;
+        for(int i=0; i< Bagitem.getallowedbags().size(),i++)
+        {
+            if(Bagitem.getallowedbags(i).equals(Bag))
+                return true;
+        }
+
+        for(int i=0; i< Bagitem.getdisallowedbags().size(),i++)
+        {
+            if(Bagitem.getdisallowedbags(i).equals(Bag))
+                return true;
+        }
+
     }
 
     boolean complete(ArrayList<BagItem> items){
