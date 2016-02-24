@@ -156,28 +156,56 @@ public class Main {
         //Is it possible to add bag value to items without violating any constraints?
         //Do we need to include a binary constraints classifier to the intances?
 
-        if (bag.lowerLimit < bag.capacity && bag.capacity < bag.upperLimit) {
 
-            for (int i = 0; i < BagItem.getallowedbags().size(); i++) {
-                if (Bagitem.getallowedbags(i).equals(bag)) {
-                    for (int j = 0; j < Bagitem.getdisallowedbags().size(); j++) {
-                        if (Bagitem.getdisallowedbags(j).equals(bag))
-                            if (binaryconstraintfunction) {
-                                if (binaryconstraintfunction2) {
-                                    if (binaryconstraintfunction3) {
-                                        return true;
-                                    }
 
-                                }
-                            }
-                    }
+        if (bag.lowerLimit > bag.numItems || bag.numItems > bag.upperLimit) {
+            return false;
+        }
+        else if (BinaryConstraint.TypeOfBinaryConstraint().equals(MUTAUl))
+        {
+            if (BinaryConstraint.getItem1()==BinaryConstraint.getBag1||BinaryConstraint.getItem1()==BinaryConstraint.getBag2)
+            {
+                if(BinaryConstraint.getItem2() != BinaryConstraint.getBag1||BinaryConstraint.getItem2() != BinaryConstraint.getBag2){
+                    return false;
                 }
             }
-
+        }
+        else if(BinaryConstraint.TypeOfBinaryConstraint().equals(EQUAL)){
+            if(BinaryConstraint.getItem1().getBag()!= BinaryConstraint.getItem2().getBag()){
+                return false;
+            }
 
         }
+        else if(BinaryConstraint.TypeOfBinaryConstraint().equals(NOTEQUAL)){
+            if(BinaryConstraint.getItem1().getBag()== BinaryConstraint.getItem2().getBag()){
+                return false;
+            }
+
+        }
+
+        else if (1==1){
+            for (int i = 0; i < singleItem.getallowedbags().size(); i++) {
+                if (! singleItem.getallowedbags(i).equals(bag)) {
+                    return false;
+                }
+
+            }
+        }
+
+        else if (1==1){
+            for (int j = 0; j < Bagitem.getdisallowedbags().size(); j++) {
+                if (! Bagitem.getdisallowedbags(j).equals(bag))
+                    return false;
+
+            }
+
+        }
+
         else
-            return false;
+            return true;
+
+
+        return false;
     }
 
     static int min(Integer[] input){
