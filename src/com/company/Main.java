@@ -155,9 +155,6 @@ public class Main {
     static boolean satifiesConstraints(Bag bag, BagItem singleItem, ArrayList<BagItem> items) {
         //Is it possible to add bag value to items without violating any constraints?
         //Do we need to include a binary constraints classifier to the intances?
-
-
-
         if (bag.lowerLimit > bag.numItems || bag.numItems > bag.upperLimit) {
             return false;
         }
@@ -170,15 +167,11 @@ public class Main {
                 }
             }
         }
-        else if(BinaryConstraint.getConstraint().equals("EQUAL")&&BinaryConstraint.getItem1().getBag1i()!= BinaryConstraint.getItem2().getBag2i()){ // need it to equal EQUAL and get the bag from item 1& item 2
-
+        else if(BinaryConstraint.getConstraint().equals(EQUAL)&&BinaryConstraint.getItem1().getBag1i()!= BinaryConstraint.getItem2().getBag2i()){ // need it to equal EQUAL and get the bag from item 1& item 2
                 return false;
-
         }
-        else if(BinaryConstraint.getConstraint().equals("NOTEQUAL")&& BinaryConstraint.getItem1().getBag1i()== BinaryConstraint.getItem2().getBag2i()){ // need to get it to equal NOT EQUAL and get the bag from item 1& item 2
-
+        else if(BinaryConstraint.getConstraint().equals(NOTEQUAL)&& BinaryConstraint.getItem1().getBag1i()== BinaryConstraint.getItem2().getBag2i()){ // need to get it to equal NOT EQUAL and get the bag from item 1& item 2
                 return false;
-
         }
         else {
             for (int i = 0; i < singleItem.getallowedbags().length; i++) { // need to get size of the array WHICH IT LITTERALLY DOES
@@ -191,10 +184,7 @@ public class Main {
                     return false;
             }
         }
-
         return true;
-
-
     }
 
     static int min(Integer[] input){
