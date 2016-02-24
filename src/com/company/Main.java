@@ -133,14 +133,14 @@ public class Main {
             if(satifiesConstraints(bag, unassigned, items)){
                 //Add item to assignment
                 //inferences ←INFERENCE(csp,var,value)
-                if(satifiesConstraints(inference, items){
+                //if(satifiesConstraints(inference, items){
                     //add inference to assignment
                     ArrayList<BagItem> result = backTrack(items);
                     if(result.size() != 0){
                         //Not a failure
                         return result;
                     }
-                }
+                //}
             }
             //Remove item and inference from assignment
         }
@@ -181,12 +181,12 @@ public class Main {
 
         }
         else {
-            for (int i = 0; i < singleItem.getallowedbags().length; i++) { // need to get size of the array WHICH IT LITTERALLY DOES
+            for (int i = 0; i < singleItem.getallowedbags().size(); i++) { // need to get size of the array WHICH IT LITTERALLY DOES
                 if (! singleItem.getallowedbags(i).equals(bag)) {
                     return false;
                 }
             }
-            for (int j = 0; j < singleItem.getDisallowedbags().length; j++) {
+            for (int j = 0; j < singleItem.getDisallowedbags().size(); j++) {
                 if (! singleItem.getDisallowedbags(j).equals(bag))// need to access the ith bag in that array
                     return false;
             }
