@@ -14,4 +14,10 @@ public class BagItem {
     ArrayList<Character> allowedBags;
     ArrayList<Character> disallowedBags;
 
+    ArrayList<Character> getallowedbags(){
+        return allowedBags;
+    }
+    ArrayList<Character> getDisallowedbags(){
+        return disallowedBags;
+    }
 }

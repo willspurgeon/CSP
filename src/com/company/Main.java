@@ -161,22 +161,22 @@ public class Main {
         if (bag.lowerLimit > bag.numItems || bag.numItems > bag.upperLimit) {
             return false;
         }
-        else if (BinaryConstraint.TypeOfBinaryConstraint().equals(MUTAUl))
+        else if (BinaryConstraint.getConstraint().equals(MUTUAL))
         {
-            if (BinaryConstraint.getItem1()==BinaryConstraint.getBag1||BinaryConstraint.getItem1()==BinaryConstraint.getBag2)
+            if (BinaryConstraint.getItem1()==BinaryConstraint.getBag1()||BinaryConstraint.getItem1()==BinaryConstraint.getBag2)
             {
-                if(BinaryConstraint.getItem2() != BinaryConstraint.getBag1||BinaryConstraint.getItem2() != BinaryConstraint.getBag2){
+                if(BinaryConstraint.getItem2() != BinaryConstraint.getBag1()||BinaryConstraint.getItem2() != BinaryConstraint.getBag2){
                     return false;
                 }
             }
         }
-        else if(BinaryConstraint.TypeOfBinaryConstraint().equals(EQUAL)){
+        else if(BinaryConstraint.getConstraint().equals(EQUAL)){
             if(BinaryConstraint.getItem1().getBag()!= BinaryConstraint.getItem2().getBag()){
                 return false;
             }
 
         }
-        else if(BinaryConstraint.TypeOfBinaryConstraint().equals(NOTEQUAL)){
+        else if(BinaryConstraint.getConstraint().equals(NOTEQUAL)){
             if(BinaryConstraint.getItem1().getBag()== BinaryConstraint.getItem2().getBag()){
                 return false;
             }
@@ -193,8 +193,8 @@ public class Main {
         }
 
         else if (1==1){
-            for (int j = 0; j < Bagitem.getdisallowedbags().size(); j++) {
-                if (! Bagitem.getdisallowedbags(j).equals(bag))
+            for (int j = 0; j < singleItem.getDisallowedbags().size(); j++) {
+                if (! singleItem.getDisallowedbags(j).equals(bag))
                     return false;
 
             }

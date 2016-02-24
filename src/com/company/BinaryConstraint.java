@@ -19,7 +19,27 @@ public class BinaryConstraint {
         this.constraint = TypeOfBinaryConstraint.MUTUAL;
     }
 
+     char getItem1()
+    {
+    return item1;
+    }
+    char getItem2()
+    {
+        return item2;
+    }
 
+    char getBag1()
+    {
+        return bag1;
+    }
+
+    char getBag2()
+    {
+        return bag2;
+    }
+    TypeOfBinaryConstraint getConstraint(){
+        return constraint;
+    }
     TypeOfBinaryConstraint constraint;
 
     char item1;
