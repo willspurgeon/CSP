@@ -9,7 +9,7 @@ import java.util.ArrayList;
 public class Main {
 
     static ArrayList<Bag> bags = new ArrayList<Bag>();
-    ArrayList<BagItem> items;
+    static ArrayList<BagItem> items;
 
     public static void main(String[] args) {
         if (args.length != 1) {
@@ -106,20 +106,31 @@ public class Main {
             e.printStackTrace();
         }
 
+        backTrackingSearch();
+
     }
 
-    void backTrackingSearch(){
-        backTrack(bags);
+    static void backTrackingSearch(){
+        ArrayList<BagItem> result = backTrack(items);
+
+        if(result.size() == 0){
+            System.out.println("There is no solution.");
+        }else{
+            for(BagItem item: result){
+                System.out.println("Item " + item.letter + " is in bag " + item.bagValue);
+            }
+        }
+
     }
 
-    ArrayList<BagItem> backTrack(ArrayList<BagItem> items){
+    static ArrayList<BagItem> backTrack(ArrayList<BagItem> items){
         if(complete(items)){
             return items;
         }
 
-        Bag unassigned = getUnassignedVariable();
+        BagItem unassigned = getUnassignedVariable();
         for(Bag bag: orderDomainValues(unassigned, items)){
-            if(satifiesConstraints(bag, items)){
+            if(satifiesConstraints(bag, unassigned, items)){
                 //Add item to assignment
                 //inferences ←INFERENCE(csp,var,value)
                 if(satifiesConstraints(inference, items){
@@ -136,17 +147,18 @@ public class Main {
         return new ArrayList<BagItem>();
     }
 
-    Bag[] orderDomainValues(Bag unassigned, ArrayList<BagItem> items) {
+    static Bag[] orderDomainValues(BagItem unassigned, ArrayList<BagItem> items) {
         //Implement heuristic here.
+        return (Bag[]) bags.toArray();
     }
 
-    boolean satifiesConstraints(Bag bag, ArrayList<BagItem> items) {
+    static boolean satifiesConstraints(Bag bag, BagItem singleItem, ArrayList<BagItem> items) {
         //Is it possible to add bag value to items without violating any constraints?
         //Do we need to include a binary constraints classifier to the intances?
-        // do we want to re order it so we dont have to search through all of these trees?
 
         if (bag.lowerLimit < bag.capacity && bag.capacity < bag.upperLimit) {
-            for (int i = 0; i < Bagitem.getallowedbags().size(); i++) {
+
+            for (int i = 0; i < BagItem.getallowedbags().size(); i++) {
                 if (Bagitem.getallowedbags(i).equals(bag)) {
                     for (int j = 0; j < Bagitem.getdisallowedbags().size(); j++) {
                         if (Bagitem.getdisallowedbags(j).equals(bag))
@@ -166,13 +178,22 @@ public class Main {
         }
         else
             return false;
-        if (bag.lowerLimit > bag.capacity || bag.capacity > bag.upperLimit) {
-            return false;
-        }
-        else if()
     }
 
-    boolean complete(ArrayList<BagItem> items){
+    static int min(Integer[] input){
+        //Returns the smallest integer.
+        int result = Integer.MAX_VALUE;
+
+        for(Integer num: input){
+            if(num < result){
+                result = num;
+            }
+        }
+        return result;
+    }
+
+    static boolean complete(ArrayList<BagItem> items){
+        //Check to see if all items have been assigned to bags.
         for(BagItem item: items){
             if(item.bagValue == ' '){
                 return false;
@@ -181,8 +202,21 @@ public class Main {
         return true;
     }
 
-    Bag getUnassignedVariable(){
+    static BagItem getUnassignedVariable(){
         //Implement heuristic here.
+        //Min-remaining values.
+        Integer[] resultArray = new Integer[items.size()];
+        int i = 0;
+        for(BagItem item: items){
+            for(Bag bag: bags){
+                if(satifiesConstraints(bag, item, items)){
+                    resultArray[i]++;
+                }
+            }
+            i++;
+        }
+
+        return items.get(min(resultArray));
     }
 
 }
