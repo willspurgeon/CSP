@@ -19,14 +19,43 @@ public class BinaryConstraint {
         this.constraint = TypeOfBinaryConstraint.MUTUAL;
     }
 
+    static char getItem1()
+    {
+    return item1;
+    }
+    static char getItem2()
+    {
+        return item2;
+    }
 
-    TypeOfBinaryConstraint constraint;
+    static char getBag1()
+    {
+        return bag1;
+    }
 
-    char item1;
-    char item2;
+    static char getBag2()
+    {
+        return bag2;
+    }
+    static TypeOfBinaryConstraint getConstraint(){
+        return constraint;
+    }
 
-    char bag1 = ' ';
-    char bag2 = ' ';
+    static char getBag1i(){
+        return item1.getBagI();
+    }
+    static char getBag2i(){
+        return item2.getBagI();
+    }
+
+
+    static TypeOfBinaryConstraint constraint;
+
+    static char item1;
+    static char item2;
+
+    static char bag1 = ' ';
+    static char bag2 = ' ';
 
     enum TypeOfBinaryConstraint{
          EQUAL,

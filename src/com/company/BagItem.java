@@ -9,9 +9,18 @@ public class BagItem {
     char letter;
     int weight;
 
-    char bagValue = ' ';
+    static char bagValue = ' ';
 
     ArrayList<Character> allowedBags;
     ArrayList<Character> disallowedBags;
 
+    ArrayList<Character> getallowedbags(){
+        return allowedBags;
+    }
+    ArrayList<Character> getDisallowedbags(){
+        return disallowedBags;
+    }
+    static char getBagI(){
+        return bagValue;
+    }
 }

@@ -161,51 +161,40 @@ public class Main {
         if (bag.lowerLimit > bag.numItems || bag.numItems > bag.upperLimit) {
             return false;
         }
-        else if (BinaryConstraint.TypeOfBinaryConstraint().equals(MUTAUl))
+        else if (BinaryConstraint.getConstraint().equals(MUTUAL))// should equal mutual
         {
-            if (BinaryConstraint.getItem1()==BinaryConstraint.getBag1||BinaryConstraint.getItem1()==BinaryConstraint.getBag2)
+            if (BinaryConstraint.getItem1()==BinaryConstraint.getBag1()||BinaryConstraint.getItem1()==BinaryConstraint.getBag2())
             {
-                if(BinaryConstraint.getItem2() != BinaryConstraint.getBag1||BinaryConstraint.getItem2() != BinaryConstraint.getBag2){
+                if(BinaryConstraint.getItem2() != BinaryConstraint.getBag1()||BinaryConstraint.getItem2() != BinaryConstraint.getBag2()){
                     return false;
                 }
             }
         }
-        else if(BinaryConstraint.TypeOfBinaryConstraint().equals(EQUAL)){
-            if(BinaryConstraint.getItem1().getBag()!= BinaryConstraint.getItem2().getBag()){
+        else if(BinaryConstraint.getConstraint().equals("EQUAL")&&BinaryConstraint.getItem1().getBag1i()!= BinaryConstraint.getItem2().getBag2i()){ // need it to equal EQUAL and get the bag from item 1& item 2
+
                 return false;
-            }
 
         }
-        else if(BinaryConstraint.TypeOfBinaryConstraint().equals(NOTEQUAL)){
-            if(BinaryConstraint.getItem1().getBag()== BinaryConstraint.getItem2().getBag()){
+        else if(BinaryConstraint.getConstraint().equals("NOTEQUAL")&& BinaryConstraint.getItem1().getBag1i()== BinaryConstraint.getItem2().getBag2i()){ // need to get it to equal NOT EQUAL and get the bag from item 1& item 2
+
                 return false;
-            }
 
         }
-
-        else if (1==1){
-            for (int i = 0; i < singleItem.getallowedbags().size(); i++) {
+        else {
+            for (int i = 0; i < singleItem.getallowedbags().length; i++) { // need to get size of the array WHICH IT LITTERALLY DOES
                 if (! singleItem.getallowedbags(i).equals(bag)) {
                     return false;
                 }
-
             }
-        }
-
-        else if (1==1){
-            for (int j = 0; j < Bagitem.getdisallowedbags().size(); j++) {
-                if (! Bagitem.getdisallowedbags(j).equals(bag))
+            for (int j = 0; j < singleItem.getDisallowedbags().length; j++) {
+                if (! singleItem.getDisallowedbags(j).equals(bag))// need to access the ith bag in that array
                     return false;
-
             }
-
         }
 
-        else
-            return true;
+        return true;
 
 
-        return false;
     }
 
     static int min(Integer[] input){
