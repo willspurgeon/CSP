@@ -3,8 +3,6 @@
   <component name="ChangeListManager">
     <list default="true" id="5e295c57-889c-458e-abfe-3f20c10f45cb" name="Default" comment="">
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/com/company/BagItem.java" afterPath="$PROJECT_DIR$/src/com/company/BagItem.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/com/company/BinaryConstraint.java" afterPath="$PROJECT_DIR$/src/com/company/BinaryConstraint.java" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/com/company/Main.java" afterPath="$PROJECT_DIR$/src/com/company/Main.java" />
     </list>
     <ignored path="CSP.iws" />
@@ -30,8 +28,8 @@
       <file leaf-file-name="Main.java" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/com/company/Main.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.8381089">
-              <caret line="177" column="189" selection-start-line="177" selection-start-column="189" selection-end-line="177" selection-end-column="189" />
+            <state vertical-scroll-proportion="0.10744986">
+              <caret line="163" column="87" selection-start-line="163" selection-start-column="87" selection-end-line="163" selection-end-column="87" />
               <folding>
                 <element signature="imports" expanded="true" />
               </folding>
@@ -506,7 +504,13 @@
       <option name="project" value="LOCAL" />
       <updated>1456279455120</updated>
     </task>
-    <option name="localTasksCounter" value="5" />
+    <task id="LOCAL-00005" summary="fixed more errors&#10;">
+      <created>1456280429378</created>
+      <option name="number" value="00005" />
+      <option name="project" value="LOCAL" />
+      <updated>1456280429378</updated>
+    </task>
+    <option name="localTasksCounter" value="6" />
     <servers />
   </component>
   <component name="ToolWindowManager">
@@ -552,7 +556,8 @@
     <MESSAGE value="Added in the satisfies constraint bag function&#10;" />
     <MESSAGE value="Finished the constraints," />
     <MESSAGE value="Finished the constraints,for shizzle my dizzle&#10;" />
-    <option name="LAST_COMMIT_MESSAGE" value="Finished the constraints,for shizzle my dizzle&#10;" />
+    <MESSAGE value="fixed more errors&#10;" />
+    <option name="LAST_COMMIT_MESSAGE" value="fixed more errors&#10;" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager />
@@ -816,8 +821,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/com/company/Main.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.8381089">
-          <caret line="177" column="189" selection-start-line="177" selection-start-column="189" selection-end-line="177" selection-end-column="189" />
+        <state vertical-scroll-proportion="0.10744986">
+          <caret line="163" column="87" selection-start-line="163" selection-start-column="87" selection-end-line="163" selection-end-column="87" />
           <folding>
             <element signature="imports" expanded="true" />
           </folding>

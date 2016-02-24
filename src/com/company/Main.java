@@ -161,7 +161,7 @@ public class Main {
         if (bag.lowerLimit > bag.numItems || bag.numItems > bag.upperLimit) {
             return false;
         }
-        else if (BinaryConstraint.getConstraint().equals(MUTUAL))
+        else if (BinaryConstraint.getConstraint().equals(MUTUAL))// should equal mutual
         {
             if (BinaryConstraint.getItem1()==BinaryConstraint.getBag1()||BinaryConstraint.getItem1()==BinaryConstraint.getBag2())
             {
