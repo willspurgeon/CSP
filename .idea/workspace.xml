@@ -28,8 +28,8 @@
       <file leaf-file-name="Main.java" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/com/company/Main.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.10744986">
-              <caret line="163" column="87" selection-start-line="163" selection-start-column="87" selection-end-line="163" selection-end-column="87" />
+            <state vertical-scroll-proportion="0.6876791">
+              <caret line="183" column="132" selection-start-line="183" selection-start-column="132" selection-end-line="183" selection-end-column="132" />
               <folding>
                 <element signature="imports" expanded="true" />
               </folding>
@@ -510,7 +510,13 @@
       <option name="project" value="LOCAL" />
       <updated>1456280429378</updated>
     </task>
-    <option name="localTasksCounter" value="6" />
+    <task id="LOCAL-00006" summary="fixed more errors&#10;">
+      <created>1456280771043</created>
+      <option name="number" value="00006" />
+      <option name="project" value="LOCAL" />
+      <updated>1456280771043</updated>
+    </task>
+    <option name="localTasksCounter" value="7" />
     <servers />
   </component>
   <component name="ToolWindowManager">
@@ -821,8 +827,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/com/company/Main.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.10744986">
-          <caret line="163" column="87" selection-start-line="163" selection-start-column="87" selection-end-line="163" selection-end-column="87" />
+        <state vertical-scroll-proportion="0.6876791">
+          <caret line="183" column="132" selection-start-line="183" selection-start-column="132" selection-end-line="183" selection-end-column="132" />
           <folding>
             <element signature="imports" expanded="true" />
           </folding>
