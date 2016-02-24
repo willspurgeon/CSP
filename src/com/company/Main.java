@@ -174,12 +174,12 @@ public class Main {
                 return false;
         }
         else {
-            for (int i = 0; i < singleItem.getallowedbags().size(); i++) { // need to get size of the array WHICH IT LITTERALLY DOES
+            for (int i = 0; i < singleItem.getallowedbags().length(); i++) { // need to get size of the array WHICH IT LITTERALLY DOES
                 if (! singleItem.getallowedbags(i).equals(bag)) {
                     return false;
                 }
             }
-            for (int j = 0; j < singleItem.getDisallowedbags().size(); j++) {
+            for (int j = 0; j < singleItem.getDisallowedbags().length(); j++) {
                 if (! singleItem.getDisallowedbags(j).equals(bag))// need to access the ith bag in that array
                     return false;
             }
