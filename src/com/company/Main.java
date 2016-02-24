@@ -143,8 +143,9 @@ public class Main {
     boolean satifiesConstraints(Bag bag, ArrayList<BagItem> items) {
         //Is it possible to add bag value to items without violating any constraints?
         //Do we need to include a binary constraints classifier to the intances?
-        if (bag.lowerLimit < bag.capacity && bag.capacity < bag.upperLimit) {
+        // do we want to re order it so we dont have to search through all of these trees?
 
+        if (bag.lowerLimit < bag.capacity && bag.capacity < bag.upperLimit) {
             for (int i = 0; i < Bagitem.getallowedbags().size(); i++) {
                 if (Bagitem.getallowedbags(i).equals(bag)) {
                     for (int j = 0; j < Bagitem.getdisallowedbags().size(); j++) {
@@ -165,6 +166,10 @@ public class Main {
         }
         else
             return false;
+        if (bag.lowerLimit > bag.capacity || bag.capacity > bag.upperLimit) {
+            return false;
+        }
+        else if()
     }
 
     boolean complete(ArrayList<BagItem> items){
