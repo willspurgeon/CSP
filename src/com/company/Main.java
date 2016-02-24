@@ -133,14 +133,14 @@ public class Main {
             if(satifiesConstraints(bag, unassigned, items)){
                 //Add item to assignment
                 //inferences ←INFERENCE(csp,var,value)
-                if(satifiesConstraints(inference, items){
+                //if(satifiesConstraints(inference, items){
                     //add inference to assignment
                     ArrayList<BagItem> result = backTrack(items);
                     if(result.size() != 0){
                         //Not a failure
                         return result;
                     }
-                }
+                //}
             }
             //Remove item and inference from assignment
         }
@@ -155,13 +155,10 @@ public class Main {
     static boolean satifiesConstraints(Bag bag, BagItem singleItem, ArrayList<BagItem> items) {
         //Is it possible to add bag value to items without violating any constraints?
         //Do we need to include a binary constraints classifier to the intances?
-
-
-
         if (bag.lowerLimit > bag.numItems || bag.numItems > bag.upperLimit) {
             return false;
         }
-        else if (BinaryConstraint.getConstraint().equals(MUTUAL))// should equal mutual
+        else if (BinaryConstraint.getConstraint().equals(BinaryConstraint.TypeOfBinaryConstraint.MUTUAL))// should equal mutual
         {
             if (BinaryConstraint.getItem1()==BinaryConstraint.getBag1()||BinaryConstraint.getItem1()==BinaryConstraint.getBag2())
             {
@@ -170,31 +167,24 @@ public class Main {
                 }
             }
         }
-        else if(BinaryConstraint.getConstraint().equals("EQUAL")&&BinaryConstraint.getItem1().getBag1i()!= BinaryConstraint.getItem2().getBag2i()){ // need it to equal EQUAL and get the bag from item 1& item 2
-
+        else if(BinaryConstraint.getConstraint().equals(EQUAL)&&BinaryConstraint.getItem1().getBag1i()!= BinaryConstraint.getItem2().getBag2i()){ // need it to equal EQUAL and get the bag from item 1& item 2
                 return false;
-
         }
-        else if(BinaryConstraint.getConstraint().equals("NOTEQUAL")&& BinaryConstraint.getItem1().getBag1i()== BinaryConstraint.getItem2().getBag2i()){ // need to get it to equal NOT EQUAL and get the bag from item 1& item 2
-
+        else if(BinaryConstraint.getConstraint().equals(NOTEQUAL)&& BinaryConstraint.getItem1().getBag1i()== BinaryConstraint.getItem2().getBag2i()){ // need to get it to equal NOT EQUAL and get the bag from item 1& item 2
                 return false;
-
         }
         else {
-            for (int i = 0; i < singleItem.getallowedbags().length; i++) { // need to get size of the array WHICH IT LITTERALLY DOES
+            for (int i = 0; i < singleItem.getallowedbags().length(); i++) { // need to get size of the array WHICH IT LITTERALLY DOES
                 if (! singleItem.getallowedbags(i).equals(bag)) {
                     return false;
                 }
             }
-            for (int j = 0; j < singleItem.getDisallowedbags().length; j++) {
+            for (int j = 0; j < singleItem.getDisallowedbags().length(); j++) {
                 if (! singleItem.getDisallowedbags(j).equals(bag))// need to access the ith bag in that array
                     return false;
             }
         }
-
         return true;
-
-
     }
 
     static int min(Integer[] input){
